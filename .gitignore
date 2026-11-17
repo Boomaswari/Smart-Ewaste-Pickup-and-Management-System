@@ -1,0 +1,15 @@
+# Mac
+.DS_Store
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven generated files
+**/target/
+
+# Uploaded images
+ewaste-backend/uploads/*
+
+# Application configuration
+ewaste-backend/src/main/resources/application.properties

@@ -1,4 +1,4 @@
-package com.ewaste.config;
+package com.ewaste.Config;
 
 import com.ewaste.service.UserService;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +17,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.util.unit.DataSize;
+import org.springframework.security.config.Customizer;
 
 import jakarta.servlet.MultipartConfigElement;
 import java.util.List;
@@ -77,7 +78,7 @@ public class SecurityConfig {
                         // All other endpoints require authentication
                         .anyRequest().authenticated()
                 )
-                .httpBasic(); // Use Basic Auth
+                .httpBasic(Customizer.withDefaults());// Use Basic Auth
         return http.build();
     }
 
