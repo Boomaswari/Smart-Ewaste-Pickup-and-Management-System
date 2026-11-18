@@ -1,15 +1,34 @@
 # Mac
 .DS_Store
 
-# IntelliJ
+# IntelliJ / VS Code
 .idea/
+.vscode/
 *.iml
 
 # Maven generated files
 **/target/
 
-# Uploaded images
+# Node generated files
+**/node_modules/
+**/dist/
+
+# Backend uploaded images
 ewaste-backend/uploads/*
 
-# Application configuration
+# Backend configuration (contains credentials)
 ewaste-backend/src/main/resources/application.properties
+
+# Frontend API configuration
+ewaste-frontend/src/api/api.js
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS temporary files
+.Trashes
